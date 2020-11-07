@@ -1,0 +1,148 @@
+c
+clear
+ls
+echo $SHELL
+ls -l
+clear
+whoami
+echo $TERM
+echo dani
+echo holi
+echo $USER
+echo $
+echo $USER
+echo '$USER'
+echo "mi usuario es $USER"
+mivariablefavo=42
+echo $mivariablefavo
+USER_NAME=danimolongui
+echo $USER_NAME
+clear
+date
+echo "hoy es el dia `date`"
+echo "hoy es el dia date"
+echo "hoy es el dia $(date)"
+echo "en este directorio encuentro lo siguiente: $(ls)"
+echo "hoy es el dia `date`\
+otra linea \
+otra linea"
+echo "hoy es el dia `date`\
+"
+echo "hoy es el dia `date`\
+"dsa;lfijasdp
+echo "hoy es el dia `date` \\
+, que es mi dia favorito"
+echo "\n"
+echo "a\nb"
+echo "a\tb"
+echo "a\b"
+echo this is echo of echo
+echo holi; date; echo adiosi
+c
+cd Data/shell
+cd ~
+clear
+cd Data/shell
+ls
+cat Text_example.txt
+cat -n Text_example.txt Text_example.txt Text_example.txt 
+cat Text_example.txt Text_example.txt Text_example.txt 
+cat -n Text_example.txt Text_example.txt Text_example.txt 
+pwd
+cd ~
+cd Data/shell
+cd ../
+pwd
+cd ../../../
+cd ~
+cd /home/dsc/Data/shell
+cd -
+cd ~
+clear
+ls
+ls -a
+c
+ls -l
+ls -1
+ls -s
+ls -l
+ls -S
+ls -lr
+chmod 644 Videos
+ls -l
+cd Videos
+chmod 775 Videos
+cd Videos
+mkdir minuevofolder
+ls -ls
+mkdir holi
+touch minuevarchivo
+ls
+mkdir -p level1/level2/level3
+ls level1/level2/level3
+rmdir level1
+rmdir -r level1
+rmdir -R level1
+rm -r level1
+clear
+c
+ls
+cp minuevarchivo ~
+cd ~
+ls
+rm minuevarchivo
+mv Videos/holi Public
+ls Public
+mv Public/holi inexistentfolder
+ls 
+ls inexistentfolder
+rmdir inexistentfolder
+echo 'agua' > nuevo
+cat nuevo
+mv nuevo madera
+cat madera
+cat nu
+cat nuevo
+rm madera
+rm -rf Videos/minuevofolder 
+clear
+git
+clear
+git clone https://github.com/IgorAramb/DS_CL_files.git
+ls
+cd DS_CL_files
+ls
+clear
+ls
+rm README.md
+git reset HEAD --hard
+ls
+man ls
+ls --help
+gitconfig--global user.name 'Dani Mateos'
+gitconfig--global user.email 'daniel@mateos.io'
+git config --global user.email 'daniel@mateos.io'
+git config --global user.name 'Dani Mateos'
+clear
+cd ~
+git clone https://github.com/danimateos/master-kschool.git
+ls
+cd master-kschool
+ls
+cat README.md
+touch nuevoarchivo
+touch modelomlparaconquistarelmundo
+rm README.md
+git status
+git add modelomlparaconquistarelmundo
+git status
+git commit -m 'Implement a random forest'
+git push
+git status
+git add modelomlparaconquistarelmundo
+git status
+git commit -m 'Dominar'
+cat modelomlparaconquistarelmundo
+clear
+git 
+git diff

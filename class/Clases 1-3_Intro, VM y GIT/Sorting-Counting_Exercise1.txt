@@ -1,0 +1,11 @@
+find ~/ -type f -size +10M -exec ls -sh {} \; | sort -nr | head -n 10
+530M /home/dsc/Data/challenge/bookings.csv.bz2
+461M /home/dsc/Data/challenge/searches.csv.bz2
+205M /home/dsc/anaconda3/pkgs/mkl-2019.1-144.tar.bz2
+86M /home/dsc/anaconda3/pkgs/qt-5.9.7-h5867ecd_1.tar.bz2
+79M /home/dsc/Data/airline_tickets/coupon150720.csv
+79M /home/dsc/anaconda3/pkgs/qt-5.9.7-h5867ecd_1/lib/libQt5WebEngineCore.so.5.9.7
+79M /home/dsc/anaconda3/lib/libQt5WebEngineCore.so.5.9.7
+72M /home/dsc/anaconda3/pkgs/mkl-2019.1-144/lib/libmkl_avx512_mic.so
+72M /home/dsc/anaconda3/lib/libmkl_avx512_mic.so
+67M /home/dsc/anaconda3/pkgs/mkl-2019.1-144/lib/libmkl_core.so
