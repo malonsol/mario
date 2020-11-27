@@ -30,17 +30,17 @@ st.markdown("""
 x = st.slider(label='Select the number or airports you want to see:',
               min_value=1,
               max_value=100, # En realidad, habría hasta 2275 aeropuertos, pero para mejor visualización
-              value=1,
+              value=11,
               step=10)
-st.text('You have selected {} airports.'.format(x))
+st.text('You have selected {} airports.'.format(x-1))
 
 if x > 0:
     # Preparación de datos para el Web Service:
     df = pd.read_csv(csv_path, delimiter='^', nrows=x)
     df_json = json.dumps(df.to_dict()) # volcado del DataFrame en un formato JSON
     st.json(df_json)
-    # Generación del gráfico de barras (opcional):    
-    bars = alt.Chart(df).mark_bar().encode(
+    # Generación del gráfico de barras horizontal:    
+    bars_h = alt.Chart(df).mark_bar().encode(
         x='pax:Q',
         y=alt.Y('arr_port:N', sort='-x')
     ).properties(
@@ -48,7 +48,16 @@ if x > 0:
         # height=150,
         title='Pax vs Arrival_Airport'
     ).interactive()
-    # Opción: mostrar gráfico
+    # Generación del gráfico de barras vertical:    
+    bars_v = alt.Chart(df).mark_bar().encode(
+        x=alt.X('arr_port:N', sort='-x'),
+        y=alt.Y('pax:Q')
+    ).properties(
+        # width=300,
+        # height=150,
+        title='Pax vs Arrival_Airport'
+    ).interactive()
+    # Checkbox: mostrar/ocultar gráfico
     st.markdown("""
     #### Do you want to visualize the data in a graphical way?
     """)
@@ -57,8 +66,15 @@ if x > 0:
         st.markdown("""
         ### Below is presented such data in a graphical mode:
         """)
-        st.write(bars)
-        st.balloons() # Chorrada graciosa
+        # Radio button: gráfico horizontal/vertical
+        bar_type = st.radio(label="Select the type of graph:",
+                            options=['Horizontal', 'Vertical'],
+                            index=0)
+        if bar_type == 'Horizontal':
+            st.write(bars_h)
+        elif bar_type == 'Vertical':
+            st.write(bars_v)
+        # st.balloons() # Chorrada graciosa
     else:
         st.text("(Nothing to show)")
 
